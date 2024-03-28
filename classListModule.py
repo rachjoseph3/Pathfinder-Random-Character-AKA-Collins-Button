@@ -38,5 +38,5 @@ def archetypemap(chosenClass):
     if chosenClass in archMapping:
         return archMapping[chosenClass]
     else:
-        return []
+        return ["", ""]
 

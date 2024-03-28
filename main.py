@@ -13,7 +13,7 @@ def runTheProgram():
     race = random.choice(raceList)
 
     clas = random.choice(classList)
-
+    
     arch = random.choice((archetypemap(clas)))
 
     print("Race: {}, Class: {}, Archetype: {}\n".format(race, clas, arch))
@@ -32,7 +32,7 @@ text.grid(row=2, column=1)
 
 tk.Button(master, text='Run', command=runTheProgram).grid(row=0, column=1, sticky=W, pady=4)
 tk.Button(master, text='Quit', command=master.quit).grid(row=3, column=0, sticky=W, pady=4)
-tk.Button(master, text='Clear Text Box', command=text.delete(1.0,tk.END)).grid(row=3, column=1, sticky=W, pady=4)
+tk.Button(master, text='Clear Text Box', command=text.delete(1.0,tk.END)).grid(row=3, column=1, sticky=W, pady=4) #clear button not working
 
 tk.mainloop( )
 
