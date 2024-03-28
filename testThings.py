@@ -4,20 +4,13 @@
 import tkinter as tk
 from tkinter import W, E
 import random
-from classListModule import classList, raceList, archetypemap
+from classListModule import classList, raceList
 
 #definitions
 def runTheProgram():
-    
-
-    race = random.choice(raceList)
-
     clas = random.choice(classList)
 
-    arch = random.choice((archetypemap(clas)))
-
-    print("Race: {}, Class: {}, Archetype: {}\n".format(race, clas, arch))
-    text.insert(tk.INSERT, "Race: {}, Class: {}, Archetype: {}\n".format(race, clas, arch))
+    text.insert(tk.INSERT, "Class: {}\n".format(clas))
 
 #GUI
 master = tk.Tk()
@@ -35,6 +28,3 @@ tk.Button(master, text='Quit', command=master.quit).grid(row=3, column=0, sticky
 tk.Button(master, text='Clear Text Box', command=text.delete(1.0,tk.END)).grid(row=3, column=1, sticky=W, pady=4)
 
 tk.mainloop( )
-
-
-
